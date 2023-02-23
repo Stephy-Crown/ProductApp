@@ -13,6 +13,7 @@ const SearchBar = ({
         // Pass the state variable to the searchInput
         value={searchText}
         placeholder="Search..."
+        // Add onChange event handler and using the state setter function to set the Seachinput
         onChange={(e) => onFilterTextChange(e.target.value)}
       />
       <label>
@@ -20,6 +21,7 @@ const SearchBar = ({
           type="checkbox"
           // Pass the state variable to the CheckInput
           checked={inStockOnly}
+          // Add onChange event handler and using the state setter function to set the Checkinput
           onChange={(e) => onInStockOnlyChange(e.target.checked)}
         />{" "}
         Only show products in stock
