@@ -7,13 +7,16 @@ const ProductTable = ({ products, searchText, inStockOnly }) => {
   let lastCategory = null;
 
   products.forEach((product) => {
+    // This IF Statement is the searchbar and for filtering
     if (product.name.toLowerCase().indexOf(searchText.toLowerCase()) === -1) {
       return;
     }
+    // This IF Statement is the Checkbox and for filtering
     if (inStockOnly && !product.stocked) {
       return;
     }
-
+    // This IF STATEMENT is for the ProductRowCategory  and ProductRow components
+    // If it is not NULL...push the product to the empty ROWS ARRAY
     if (product.category !== lastCategory) {
       // PUSHING THE SIX PRODUCTS INTO THE EMPTY 'ROW' ARRAY
       // console.log(
