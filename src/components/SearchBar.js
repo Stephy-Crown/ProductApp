@@ -13,7 +13,7 @@ const SearchBar = ({
         // Pass the state variable to the searchInput
         value={searchText}
         placeholder="Search..."
-        // Add onChange event handler and using the state setter function to set the Seachinput
+        // Add onChange event handler and using the state setter function to set the Seachinput::Until you do this,React wont respond to changes on the input.
         onChange={(e) => onFilterTextChange(e.target.value)}
       />
       <label>
