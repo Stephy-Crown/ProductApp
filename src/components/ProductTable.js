@@ -24,14 +24,16 @@ const ProductTable = ({ products, searchText, inStockOnly }) => {
       //     />
       //   )
       // );
+      // PUSHING THE SIX PRODUCTS INTO THE EMPTY 'ROW' ARRAY
       rows.push(
         <ProductCategoryRow
           category={product.category}
+          // Giving them a key which is an identifier of what category each product is
           key={product.category}
         />
       );
     }
-    // //////////////////////////////
+    // PUSHING THE SIX PRODUCTS INTO THE EMPTY 'ROW' ARRAY
     rows.push(<ProductRow product={product} key={product.name} />);
     // console.log((lastCategory = product.category));
     lastCategory = product.category;
