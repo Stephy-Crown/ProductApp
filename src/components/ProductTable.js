@@ -8,7 +8,11 @@ const ProductTable = ({ products, searchText, inStockOnly }) => {
 
   products.forEach((product) => {
     // This IF Statement is the searchbar and for filtering
+    //".toLowerCase" This is converting the product name and the search input text the user types to lower case regardless if the user types uppercase letter
+    // .indexOf---gives the index of the element in the array
+    // So if the index of the searchText of the user is equal to -1(meaning its not there) return nothing
     if (product.name.toLowerCase().indexOf(searchText.toLowerCase()) === -1) {
+      // Return nothing
       return;
     }
     // This IF Statement is the Checkbox and for filtering
